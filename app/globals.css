@@ -171,3 +171,23 @@
     @apply bg-background text-foreground;
   }
 }
+
+::view-transition-old(root), ::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+}
+.animate-ping{
+  animation-delay: 4000ms;
+  animation-duration: 2000ms;
+}
+
+@keyframes ping {
+  0%, 100% {
+    transform: translateY(100%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
