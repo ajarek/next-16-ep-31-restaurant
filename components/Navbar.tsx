@@ -21,6 +21,7 @@ const Navbar = () => {
             width={80}
             height={80}
             className='object-contain rounded-full'
+            loading='eager'
           />
         </div>
         <div className='hidden md:flex flex-col'>

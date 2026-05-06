@@ -41,6 +41,7 @@ export function SheetNav() {
                   width={50}
                   height={50}
                   className='object-contain rounded-full'
+                  loading='eager'
                 />
               </div>
               Menu
@@ -48,7 +49,7 @@ export function SheetNav() {
           </SheetTitle>
         </SheetHeader>
         <div className='flex flex-col items-start gap-4 text-xl italic font-semibold p-4'>
-          <NavLinks />
+          <NavLinks isMobile={true}/>
         </div>
       </SheetContent>
     </Sheet>

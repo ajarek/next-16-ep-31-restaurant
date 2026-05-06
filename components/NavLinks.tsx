@@ -4,13 +4,13 @@ import { usePathname } from "next/navigation"
 import Link from "next/link"
 import SpecialButton from "./SpecialButton"
 
-const NavLinks = () => {
+const NavLinks = ({isMobile}: {isMobile?: boolean}) => {
   const pathname = usePathname()
   return (
     <nav
       role='navigation'
       aria-label='Main navigation'
-      className='flex flex-col gap-4'
+      className={cn("flex flex-col gap-4", !isMobile && "flex-row")}
     >
       {navLinks.map((link) => (
         <Link
@@ -31,7 +31,7 @@ const NavLinks = () => {
           <span>{link.label}</span>
         </Link>
       ))}
-      <SpecialButton link='/reservation' label='Reservation' />
+      <SpecialButton link='/reservation' label='Reservation'  />
     </nav>
   )
 }
