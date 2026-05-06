@@ -12,18 +12,18 @@ export default function Footer() {
         {/* Left Section - Logo & Description */}
         <div className="flex flex-col gap-6 max-w-sm">
           <Link href="/" className="flex items-center gap-3" aria-label="Home">
-            <Image src="/images-home/logo.webp" alt="Vercel Logo" width={60} height={60} className="object-contain rounded-full" />
+            <Image src="/images-home/logo.webp" alt="Still Sea Logo" width={60} height={60} className="object-contain rounded-full" />
             <span className="text-3xl font-serif font-bold tracking-tight">Still Sea</span>
           </Link>
           <p className="text-muted-foreground text-sm leading-relaxed">
-            Sizzlo is more than a restaurant — it&apos;s where fine taste meets timeless ambiance. Join us for unforgettable dining moments, crafted with passion, precision, and elegance.
+            Still Sea is more than a restaurant — it&apos;s where fine taste meets timeless ambiance. Join us for unforgettable dining moments, crafted with passion, precision, and elegance.
           </p>
         </div>
 
         {/* Right Section - Nav & Contact */}
         <div className="flex flex-col gap-10 md:w-2/3 md:items-end">
           {/* Navigation Links */}
-          <nav className="flex flex-wrap md:justify-end gap-x-8 gap-y-4 font-semibold text-sm tracking-wide">
+          <nav role="navigation" className="flex flex-wrap md:justify-end gap-x-8 gap-y-4 font-semibold text-sm tracking-wide">
             {navLinks.map((link) => (
               <Link 
                 key={link.href} 
@@ -63,19 +63,19 @@ export default function Footer() {
 
             {/* Social Links */}
             <div className="flex flex-col gap-5 sm:items-end">
-              <Link href="#" className="flex items-center gap-4 hover:text-primary transition-colors group">
+              <Link href="#" aria-label="Facebook" className="flex items-center gap-4 hover:text-primary transition-colors group">
                 <span className="text-sm font-semibold tracking-wide">Facebook</span>
                 <div className="border border-primary rounded p-2 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
                   <FaFacebook size={18} />
                 </div>
               </Link>
-              <Link href="#" className="flex items-center gap-4 hover:text-primary transition-colors group">
+              <Link href="#" aria-label="Instagram" className="flex items-center gap-4 hover:text-primary transition-colors group">
                 <span className="text-sm font-semibold tracking-wide">Instagram</span>
                 <div className="border border-primary rounded p-2 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
                   <FaInstagram size={18} />
                 </div>
               </Link>
-              <Link href="#" className="flex items-center gap-4 hover:text-primary transition-colors group">
+              <Link href="#" aria-label="Youtube" className="flex items-center gap-4 hover:text-primary transition-colors group">
                 <span className="text-sm font-semibold tracking-wide">Youtube</span>
                 <div className="border border-primary rounded p-2 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
                   <FaYoutube size={18} />

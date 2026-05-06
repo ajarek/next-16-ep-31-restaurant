@@ -23,7 +23,7 @@ const Hero = () => {
           <div className='relative w-[300px] h-[250px] border-6 border-foreground rounded-bl-none rounded-tr-none rounded-br-[150px] rounded-tl-[150px] overflow-hidden'>
             <Image
               src='/images-home/hero-1.avif'
-              alt='Vercel Logo'
+              alt='Restaurant Interior'
               fill
               sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
               className='object-cover object-center'
