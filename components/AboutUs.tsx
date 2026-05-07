@@ -16,7 +16,7 @@ const AboutUs = () => {
             Delicious Food, Warm Atmosphere
           </h3>
           <p className='text-lg md:text-xl  text-text/80'>
-            At Sizzlo, dining is more than a meal &mdash; it&apos;s an
+            At Stil Sea, dining is more than a meal &mdash; it&apos;s an
             experience. Born from a passion for culinary artistry and refined
             elegance, we bring together world-class flavors, exquisite ambiance,
             and impeccable service. Every dish we serve is thoughtfully crafted,
@@ -34,6 +34,8 @@ const AboutUs = () => {
                 alt='about'
                 fill
                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                loading="eager"
+                className="object-cover hover:scale-110 transition-transform duration-500 "
               />
             </div>
             <div className='relative w-[220px] h-[250px]  border-6 border-foreground rounded-bl-none rounded-tr-none rounded-br-[100px] rounded-tl-[100px] overflow-hidden'>
@@ -42,6 +44,8 @@ const AboutUs = () => {
                 alt='about'
                 fill
                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                loading="eager"
+                className="object-cover  hover:scale-110 transition-transform duration-500 "
               />
             </div>
           </div>
@@ -51,6 +55,8 @@ const AboutUs = () => {
               alt='about'
               fill
               sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+              loading="eager"
+              className="object-cover hover:scale-110 transition-transform duration-500 "
             />
           </div>
         </div>
