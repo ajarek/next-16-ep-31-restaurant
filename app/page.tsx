@@ -3,6 +3,7 @@ import DiningOptions from "@/components/DiningOptions"
 import OurMenu from "@/components/OurMenu"
 import AboutUs from "@/components/AboutUs"
 import Events from "@/components/Events"
+import Testimonials from "@/components/Testimonials"
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <OurMenu />
       <AboutUs />
       <Events />
+      <Testimonials />
     </div>
   )
 }
