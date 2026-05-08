@@ -28,7 +28,7 @@ const AboutUs = () => {
         </div>
         <div className='w-full flex flex-col items-center justify-center gap-8'>
           <div className='flex items-center justify-center gap-6'>
-            <div className='relative w-[220px] h-[250px]  border-6 border-foreground rounded-bl-none rounded-tr-none rounded-br-[100px] rounded-tl-[100px] overflow-hidden'>
+            <div className='relative md:w-[220px] md:h-[250px] w-[150px] h-[200px]  border-6 border-foreground rounded-bl-none rounded-tr-none rounded-br-[100px] rounded-tl-[100px] overflow-hidden'>
               <Image
                 src='/images-home/about-1.avif'
                 alt='about'
@@ -38,7 +38,7 @@ const AboutUs = () => {
                 className="object-cover hover:scale-110 transition-transform duration-500 "
               />
             </div>
-            <div className='relative w-[220px] h-[250px]  border-6 border-foreground rounded-bl-none rounded-tr-none rounded-br-[100px] rounded-tl-[100px] overflow-hidden'>
+            <div className='relative md:w-[220px] md:h-[250px] w-[150px] h-[200px]  border-6 border-foreground rounded-bl-none rounded-tr-none rounded-br-[100px] rounded-tl-[100px] overflow-hidden'>
               <Image
                 src='/images-home/about-2.avif'
                 alt='about'
@@ -49,15 +49,10 @@ const AboutUs = () => {
               />
             </div>
           </div>
-          <div className='relative w-[450px] h-[300px]  border-6 border-foreground rounded-bl-none rounded-tr-[100px] rounded-br-none rounded-tl-[100px] overflow-hidden'>
-            <Image
-              src='/images-home/about-3.avif'
-              alt='about'
-              fill
-              sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-              loading="eager"
-              className="object-cover hover:scale-110 transition-transform duration-500 "
-            />
+          <div className='relative md:w-[450px] md:h-[250px] w-[300px] h-[200px] border-6 border-foreground rounded-bl-none rounded-tr-[100px] rounded-br-none rounded-tl-[100px] overflow-hidden'>
+            <video className="object-cover hover:scale-110 transition-transform duration-500 " autoPlay={true} muted loop>
+              <source src="/movies/about-movie.mp4" type="video/mp4" />
+            </video>
           </div>
         </div>
       </div>

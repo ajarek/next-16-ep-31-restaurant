@@ -58,7 +58,7 @@ const Events = () => {
             className='relative w-full border-6 border-foreground rounded-bl-none rounded-tr-none rounded-br-[100px] rounded-tl-[100px] p-8 shadow-2xl'
           >
             <div className='w-full grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center'>
-              <div className='group/img relative w-[350px] md:w-[450px] h-[300px] md:h-[350px]  border-2 border-foreground rounded-bl-none rounded-tr-none rounded-br-[100px] rounded-tl-[100px] overflow-hidden'>
+              <div className='group/img relative w-[300px] md:w-[450px] h-[280px] md:h-[350px]  border-2 border-foreground rounded-bl-none rounded-tr-none rounded-br-[100px] rounded-tl-[100px] overflow-hidden'>
                 <Image
                   src={event.image}
                   alt={event.title}

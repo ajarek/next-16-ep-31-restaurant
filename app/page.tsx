@@ -4,6 +4,8 @@ import OurMenu from "@/components/OurMenu"
 import AboutUs from "@/components/AboutUs"
 import Events from "@/components/Events"
 import Testimonials from "@/components/Testimonials"
+import Gourmet from "@/components/Gourmet"
+import Gallery from "@/components/Gallery"
 
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
       <AboutUs />
       <Events />
       <Testimonials />
+      <Gourmet />
+      <Gallery />
     </div>
   )
 }

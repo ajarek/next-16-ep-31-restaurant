@@ -1,6 +1,25 @@
 import Image from "next/image"
 import SpecialButton from "./SpecialButton"
-
+import { TypewriterEffect } from "./ui/typewriter-effect";
+const words = [
+    {
+      text: "Indulge",
+      className: "dark:text-[#ffac12] text-[#ffac12]",
+    },
+    {
+      text: "in",
+      className: "dark:text-[#ffac12] text-[#ffac12]",
+    },
+    {
+      text: "Luxurious",
+      className: "dark:text-[#ffac12] text-[#ffac12]",
+    },
+    {
+      text: "Flavors",
+      className: "dark:text-[#ffac12] text-[#ffac12]",
+    },
+    
+  ];
 const Hero = () => {
   return (
     <section className='flex justify-center items-center pt-32'>
@@ -8,8 +27,7 @@ const Hero = () => {
         <div className='flex flex-col gap-8 justify-center'>
           <p className='text-primary text-xl md:text-2xl uppercase tracking-wider'>Experience the best</p>
           <h1 className='text-3xl md:text-6xl font-bold text-primary'>
-            Indulge in <br />
-            Luxurious Flavors
+           <TypewriterEffect words={words} />
           </h1>
           <p className='text-foreground'>
             Where every dish tells a story and every moment lingers. Experience fine dining that captivates your senses.
