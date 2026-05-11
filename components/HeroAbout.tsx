@@ -1,12 +1,28 @@
 import Image from "next/image"
-
+import { TypewriterEffect } from "./ui/typewriter-effect";
+const words = [
+    {
+      text: "Who",
+      className: "dark:text-[#ffac12] text-[#ffac12]",
+    },
+    {
+      text: "We",
+      className: "dark:text-[#ffac12] text-[#ffac12]",
+    },
+    {
+      text: "Are",
+      className: "dark:text-[#ffac12] text-[#ffac12]",
+    },
+   
+    
+  ];
 
 const HeroAbout = () => {
   return (
     <div className='flex flex-col items-center justify-center gap-8 w-full'>
         <div className='max-w-4xl mx-auto text-center '>
         <h1 className='text-5xl font-bold text-primary text-center mb-8 '>
-          Who We Are
+          <TypewriterEffect words={words} />
         </h1>
         <p className='text-xl text-center'>
           At Still Sea, we believe fine dining is more than just a meal —

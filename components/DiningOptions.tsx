@@ -12,13 +12,14 @@ const DiningOptions = () => {
         </p>
       </div>
       <div className='w-full  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 place-items-center'>
-        <div >
+        <div className='relative w-[300px] h-[350px] border-6 border-foreground rounded-bl-none rounded-tr-none rounded-br-[100px] rounded-tl-[100px] overflow-hidden'>
           <Image
             fill
             className='w-full h-auto rounded-xl object-cover sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"'
             src='/images-home/dining-options-1.avif'
             alt='dining option'
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            loading='eager'
           />
         </div>
         <div className='relative w-[300px] h-[350px] border-6 border-foreground rounded-bl-none rounded-tr-none rounded-br-[100px] rounded-tl-[100px] overflow-hidden'>
@@ -28,6 +29,7 @@ const DiningOptions = () => {
             src='/images-home/dining-options-2.avif'
             alt='dining option'
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            loading='eager'
           />
         </div>
         <div className='relative w-[300px] h-[350px] border-6 border-foreground rounded-bl-none rounded-tr-none rounded-br-[100px] rounded-tl-[100px] overflow-hidden'>
@@ -37,6 +39,7 @@ const DiningOptions = () => {
             src='/images-home/dining-options-3.avif'
             alt='dining option'
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            loading='eager'
               />
         </div>
         <div className='relative w-[300px] h-[350px] border-6 border-foreground rounded-bl-none rounded-tr-none rounded-br-[100px] rounded-tl-[100px] overflow-hidden'>
@@ -46,6 +49,7 @@ const DiningOptions = () => {
             src='/images-home/dining-options-4.avif'
             alt='dining option'
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            loading='eager'
           />
         </div>
       </div>
