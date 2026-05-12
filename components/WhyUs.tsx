@@ -1,5 +1,4 @@
 import Image from "next/image"
-import Link from "next/link"
 import { FaCocktail } from "react-icons/fa"
 import { FaBowlFood } from "react-icons/fa6"
 import { TbHearts, TbSalt } from "react-icons/tb"

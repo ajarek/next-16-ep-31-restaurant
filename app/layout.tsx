@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
 import { TooltipProvider } from "@/components/ui/tooltip"
+import { Toaster } from "sonner"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,6 +42,7 @@ export default function RootLayout({
         <TooltipProvider>
           <Navbar />
           <main className='flex-1'>{children}</main>
+          <Toaster position='top-right' richColors closeButton theme='light' />
           <Footer />
         </TooltipProvider>
       </body>
