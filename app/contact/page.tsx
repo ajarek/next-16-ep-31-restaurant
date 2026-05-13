@@ -4,6 +4,7 @@ import ContactUs from '@/components/ContactUs'
 import Gourmet from '@/components/Gourmet'
 import HeroContact from '@/components/HeroContact'
 import MapContact from '@/components/MapContact'
+import FAQ from '@/components/FAQ'
 
 const ContactPage = () => {
   return (
@@ -12,6 +13,7 @@ const ContactPage = () => {
         <ContactUs />
         <ContactInfo />
         <MapContact />
+        <FAQ/>
         <Gourmet />
     </div>
   )

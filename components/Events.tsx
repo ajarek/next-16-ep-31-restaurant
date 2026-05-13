@@ -11,7 +11,7 @@ const events = [
     id: 1,
     title: "Romantic Nights",
     description:
-      "Celebrate love in the most enchanting way. With candlelight, soft music, and a menu made for two, Sizzlo transforms into the perfect romantic escape. Ideal for anniversaries, proposals, or meaningful moments.",
+      "Celebrate love in the most enchanting way. With candlelight, soft music, and a menu made for two, Still Sea transforms into the perfect romantic escape. Ideal for anniversaries, proposals, or meaningful moments.",
     image: "/images-home/events-3.avif",
     deadline: "Every Saturday",
     timing: "7:00 PM – Close",

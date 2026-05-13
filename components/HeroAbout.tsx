@@ -55,6 +55,9 @@ const HeroAbout = () => {
             alt='About-As'
             fill
             className='object-cover rounded-xl'
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            loading="eager"
+            priority={true}
           />
         </div>
         <div className="static md:absolute right-10 bottom-20 w-120 p-4 bg-background/80 border-2 shadow-2xl z-10 rounded-2xl">

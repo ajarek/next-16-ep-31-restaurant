@@ -42,6 +42,9 @@ const WhyUs = () => {
               alt='Why choose Still Sea'
               fill
               className='object-cover rounded-xl'
+              sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+              loading='eager'
+              priority={true}
             />
           </div>
         </div>
@@ -52,6 +55,9 @@ const WhyUs = () => {
               alt='Why choose Still Sea'
               fill
               className='object-cover rounded-xl'
+              sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+              loading='eager'
+              priority={true}
             />
           </div>
           <div className='w-full grid grid-cols-1 md:grid-cols-2  gap-4'>
