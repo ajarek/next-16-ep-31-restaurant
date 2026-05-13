@@ -54,7 +54,7 @@ export function ContactForm() {
   })
 
   function onSubmit(data: z.infer<typeof formSchema>) {
-    toast("You submitted the following values:", {
+    toast("Thank you for your message:", {
       description: (
         <pre className='mt-2 w-[320px] overflow-x-auto rounded-md bg-code p-4 text-code-foreground'>
           <code>{JSON.stringify(data, null, 2)}</code>
@@ -89,7 +89,7 @@ export function ContactForm() {
                 <Field data-invalid={fieldState.invalid}>
                   <FieldLabel
                     htmlFor='form-rhf-demo-title'
-                    className='text-background'
+                    className='text-black'
                   >
                    Full Name*
                   </FieldLabel>
@@ -98,6 +98,7 @@ export function ContactForm() {
                     id='form-rhf-demo-title'
                     aria-invalid={fieldState.invalid}
                     placeholder='Login button not working on mobile'
+                    className="text-black"
                     autoComplete='off'
                   />
                   {fieldState.invalid && (
@@ -116,7 +117,7 @@ export function ContactForm() {
                 <Field data-invalid={fieldState.invalid}>
                   <FieldLabel
                     htmlFor='form-rhf-demo-email'
-                    className='text-background'
+                    className='text-black'
                   >
                    Email*
                   </FieldLabel>
@@ -126,6 +127,7 @@ export function ContactForm() {
                     aria-invalid={fieldState.invalid}
                     placeholder='example@gmail.com'
                     autoComplete='off'
+                    className='text-black'
                   />
                   {fieldState.invalid && (
                     <FieldError
@@ -143,7 +145,7 @@ export function ContactForm() {
                 <Field data-invalid={fieldState.invalid}>
                   <FieldLabel
                     htmlFor='form-rhf-demo-message'
-                    className='text-background'
+                    className='text-black'
                   >
                     Message*
                   </FieldLabel>
@@ -153,7 +155,7 @@ export function ContactForm() {
                       id='form-rhf-demo-message'
                       placeholder="Write your message here..."
                       rows={6}
-                      className='min-h-24 resize-none'
+                      className='min-h-24 resize-none text-black'
                       aria-invalid={fieldState.invalid}
                     />
                     <InputGroupAddon align='block-end'>

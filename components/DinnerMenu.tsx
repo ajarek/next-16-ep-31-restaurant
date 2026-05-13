@@ -50,12 +50,12 @@ const DinnerMenu = () => {
                   </DialogTrigger>
                   <DialogContent className="max-w-full md:max-w-lg">
                     <DialogHeader>
-                      <DialogTitle>{item.title}</DialogTitle>
-                      <DialogDescription>{item.description}</DialogDescription>
-                      <p className='w-fit text-sm text-muted-foreground p-2 border border-primary my-4 rounded-md'>
+                      <DialogTitle className="text-xl">{item.title}</DialogTitle>
+                      <DialogDescription className="text-foreground">{item.description}</DialogDescription>
+                      <p className='w-fit text-sm  p-2 border border-primary my-4 rounded-md'>
                         {item.info}
                       </p>
-                      <p className='w-fit text-lg text-muted-foreground  my-4 rounded-md'>
+                      <p className='w-fit text-lg   my-4 rounded-md'>
                        Price: ${item.price.toFixed(2)}
                       </p>
                     </DialogHeader>
@@ -71,9 +71,9 @@ const DinnerMenu = () => {
                 </Dialog>
               </CardHeader>
               <CardContent>
-                <CardTitle>{item.title}</CardTitle>
-                <CardDescription>{item.description}</CardDescription>
-                <p className='w-fit text-sm text-muted-foreground p-2 border border-primary my-4 rounded-md'>
+                <CardTitle className="text-xl">{item.title}</CardTitle>
+                <CardDescription className="text-foreground">{item.description}</CardDescription>
+                <p className='w-fit text-sm  p-2 border border-primary my-4 rounded-md'>
                   {item.info}
                 </p>
               </CardContent>
@@ -115,12 +115,12 @@ const DinnerMenu = () => {
                   </DialogTrigger>
                   <DialogContent className="max-w-full md:max-w-lg">
                     <DialogHeader>
-                      <DialogTitle>{item.title}</DialogTitle>
-                      <DialogDescription>{item.description}</DialogDescription>
-                      <p className='w-fit text-sm text-muted-foreground p-2 border border-primary my-4 rounded-md'>
+                      <DialogTitle className="text-xl">{item.title}</DialogTitle>
+                      <DialogDescription className="text-foreground">{item.description}</DialogDescription>
+                      <p className='w-fit text-sm  p-2 border border-primary my-4 rounded-md'>
                         {item.info}
                       </p>
-                      <p className='w-fit text-lg text-muted-foreground  my-4 rounded-md'>
+                      <p className='w-fit text-lg   my-4 rounded-md'>
                        Price: ${item.price.toFixed(2)}
                       </p>
                     </DialogHeader>
@@ -136,9 +136,9 @@ const DinnerMenu = () => {
                 </Dialog>
               </CardHeader>
               <CardContent>
-                <CardTitle>{item.title}</CardTitle>
-                <CardDescription>{item.description}</CardDescription>
-                <p className='w-fit text-sm text-muted-foreground p-2 border border-primary my-4 rounded-md'>
+                <CardTitle className="text-xl">{item.title}</CardTitle>
+                <CardDescription className="text-foreground">{item.description}</CardDescription>
+                <p className='w-fit text-sm  p-2 border border-primary my-4 rounded-md'>
                   {item.info}
                 </p>
               </CardContent>
@@ -175,12 +175,12 @@ const DinnerMenu = () => {
                   </DialogTrigger>
                   <DialogContent className="max-w-full md:max-w-lg">
                     <DialogHeader>
-                      <DialogTitle>{item.title}</DialogTitle>
-                      <DialogDescription>{item.description}</DialogDescription>
-                      <p className='w-fit text-sm text-muted-foreground p-2 border border-primary my-4 rounded-md'>
+                      <DialogTitle className="text-xl">{item.title}</DialogTitle>
+                      <DialogDescription className="text-foreground">{item.description}</DialogDescription>
+                      <p className='w-fit text-sm  p-2 border border-primary my-4 rounded-md'>
                         {item.info}
                       </p>
-                      <p className='w-fit text-lg text-muted-foreground  my-4 rounded-md'>
+                      <p className='w-fit text-lg   my-4 rounded-md'>
                        Price: ${item.price.toFixed(2)}
                       </p>
                     </DialogHeader>
@@ -196,9 +196,9 @@ const DinnerMenu = () => {
                 </Dialog>
               </CardHeader>
               <CardContent>
-                <CardTitle>{item.title}</CardTitle>
-                <CardDescription>{item.description}</CardDescription>
-                <p className='w-fit text-sm text-muted-foreground p-2 border border-primary my-4 rounded-md'>
+                <CardTitle className="text-xl">{item.title}</CardTitle>
+                <CardDescription className="text-foreground">{item.description}</CardDescription>
+                <p className='w-fit text-sm  p-2 border border-primary my-4 rounded-md'>
                   {item.info}
                 </p>
               </CardContent>
@@ -235,12 +235,12 @@ const DinnerMenu = () => {
                   </DialogTrigger>
                   <DialogContent className="max-w-full md:max-w-lg">
                     <DialogHeader>
-                      <DialogTitle>{item.title}</DialogTitle>
-                      <DialogDescription>{item.description}</DialogDescription>
-                       <p className='w-fit text-sm text-muted-foreground p-2 border border-primary my-4 rounded-md'>
+                      <DialogTitle className="text-xl">{item.title}</DialogTitle>
+                      <DialogDescription className="text-foreground">{item.description}</DialogDescription>
+                       <p className='w-fit text-sm  p-2 border border-primary my-4 rounded-md'>
                         {item.info}
                       </p>
-                      <p className='w-fit text-lg text-muted-foreground  my-4 rounded-md'>
+                      <p className='w-fit text-lg   my-4 rounded-md'>
                        Price: ${item.price.toFixed(2)}
                       </p>
                     </DialogHeader>
@@ -256,9 +256,9 @@ const DinnerMenu = () => {
                 </Dialog>
               </CardHeader>
               <CardContent>
-                <CardTitle>{item.title}</CardTitle>
-                <CardDescription>{item.description}</CardDescription>
-                <p className='w-fit text-sm text-muted-foreground p-2 border border-primary my-4 rounded-md'>
+                <CardTitle className="text-xl">{item.title}</CardTitle>
+                <CardDescription className="text-foreground">{item.description}</CardDescription>
+                <p className='w-fit text-sm  p-2 border border-primary my-4 rounded-md'>
                   {item.info}
                 </p>
               </CardContent>
