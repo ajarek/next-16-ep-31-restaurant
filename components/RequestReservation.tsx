@@ -104,14 +104,13 @@ const RequestReservation = () => {
     if (res.success) {
       toast.success("Reservation request sent successfully!");
       form.reset();
-      if (session?.user?.name) {
-        form.setValue("nameReservation", session.user.name);
-      }
+      await signOut();
     } else {
       toast.error(res.error || "Failed to make reservation.");
     }
     
     setIsSubmitted(false);
+    
   }
 
   const handleAuth = async (e: React.FormEvent) => {
@@ -443,4 +442,4 @@ const RequestReservation = () => {
   );
 };
 
-export default RequestReservation;
+export default RequestReservation;
