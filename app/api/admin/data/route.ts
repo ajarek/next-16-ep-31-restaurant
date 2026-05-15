@@ -56,7 +56,7 @@ export async function GET(request: NextRequest) {
         u.email AS user_email
       FROM reservations r
       LEFT JOIN neon_auth."user" u ON u.id::text = r.userid
-      ORDER BY r.created_at DESC
+      ORDER BY r.date ASC, r.time ASC
     `,
   ]);
 

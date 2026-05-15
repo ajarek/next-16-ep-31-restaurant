@@ -2,7 +2,7 @@
 "use client"
 
 import { useSession, signIn, signOut } from "@/lib/auth-client"
-import { useEffect, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 import { toast } from "sonner"
 import { getAdminDashboardData } from "@/app/actions/admin"
 
@@ -17,8 +17,10 @@ import {
   LayoutDashboard,
   BadgeCheck,
   Ban,
+  MoveLeft,
 } from "lucide-react"
 import Link from "next/link"
+import { removeReservation } from "../actions/removal"
 
 type DBUser = {
   id: string
@@ -116,6 +118,10 @@ function AdminLoginForm() {
           <p className='text-zinc-400 mt-2 text-sm'>
             Still Sea Restaurant • Access only for administrators
           </p>
+          <div className="flex items-center justify-center gap-2 mt-2">
+            <MoveLeft className='w-4 h-4 text-amber-500' />
+            <Link href="/" className="text-amber-500 text-center">Back to Home</Link>
+          </div>
         </div>
 
         <form
@@ -164,6 +170,7 @@ function AdminLoginForm() {
           </button>
         </form>
       </div>
+        
     </div>
   )
 }
@@ -173,18 +180,37 @@ function AdminDashboard({ userName }: { userName: string; userRole?: string }) {
   const [loading, setLoading] = useState(true)
   const [tab, setTab] = useState<"reservations" | "users">("reservations")
 console.log(data)
-  useEffect(() => {
-    getAdminDashboardData()
-      .then((result) => {
-        if (result.error) throw new Error(result.error)
-        setData({
-          users: result.users as DBUser[],
-          reservations: result.reservations as Reservation[],
-        })
+  const loadData = useCallback(async () => {
+    try {
+      const result = await getAdminDashboardData()
+      if (result.error) throw new Error(result.error)
+      setData({
+        users: result.users as DBUser[],
+        reservations: result.reservations as Reservation[],
       })
-      .catch(() => toast.error("Nie udało się pobrać danych"))
-      .finally(() => setLoading(false))
+    } catch (err) {
+      toast.error("Nie udało się pobrać danych"+err)
+    } finally {
+      setLoading(false)
+    }
   }, [])
+
+  useEffect(() => {
+    // Używamy flagi, aby uniknąć wyścigu (race condition)
+    let isMounted = true;
+    
+    const fetchData = async () => {
+      if (isMounted) {
+        await loadData();
+      }
+    };
+
+    fetchData();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [loadData])
 
   return (
     <div className='fixed inset-0 z-200 bg-zinc-950 overflow-auto'>
@@ -313,6 +339,9 @@ console.log(data)
                         <th className='text-left px-5 py-3 text-zinc-400 font-medium'>
                           Placed
                         </th>
+                        <th className='text-left px-5 py-3 text-zinc-400 font-medium'>
+                          Remove
+                        </th>
                       </tr>
                     </thead>
                     <tbody className='divide-y divide-zinc-800'>
@@ -356,6 +385,25 @@ console.log(data)
                             </td>
                             <td className='px-5 py-3.5 text-zinc-500 text-xs'>
                               {fmt(r.created_at)} {fmtTime(r.created_at)}
+                            </td>
+                            <td className='px-5 py-3.5'>
+                                <button
+                                  onClick={async () => {
+                                    const id = r.id.toString()
+                                    toast.promise(removeReservation(id), {
+                                      loading: 'Deleting...',
+                                      success: () => {
+                                        setLoading(true) // Tutaj można bezpiecznie ustawić loading
+                                        loadData()
+                                        return 'Reservation deleted'
+                                      },
+                                      error: 'Failed to delete reservation'
+                                    })
+                                  }}
+                                  className='bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded'
+                                >
+                                  Remove
+                                </button>
                             </td>
                           </tr>
                         ))

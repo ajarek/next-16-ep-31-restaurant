@@ -28,7 +28,7 @@ const Gourmet = () => {
         <div className='text-white text-center'>
           <h1 className='text-2xl md:text-5xl text-foreground font-bold mb-4'>Your Gourmet Moment Starts Here</h1>
           <div className='text-xl flex flex-col md:flex-row items-center justify-center gap-4'>
-            <SpecialButton label="Book Your Table" link='/reservations' className='bg-secondary text-secondary-foreground ' />
+            <SpecialButton label="Book Your Table" link='/reservation' className='bg-secondary text-secondary-foreground ' />
             <SpecialButton label="View Menu" link='/menu' className='bg-secondary text-secondary-foreground ' />
           </div>
         </div>
