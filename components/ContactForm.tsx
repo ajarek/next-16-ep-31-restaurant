@@ -30,6 +30,8 @@ import {
 } from "@/components/ui/input-group"
 import { cn } from "@/lib/utils"
 
+const MESSAGE_MAX_LENGTH = 500
+
 const formSchema = z.object({
   name: z
     .string()
@@ -39,7 +41,7 @@ const formSchema = z.object({
   message: z
     .string()
     .min(10, "Message must be at least 10 characters.")
-    .max(500, "Message must be at most 500 characters."),
+    .max(MESSAGE_MAX_LENGTH, `Message must be at most ${MESSAGE_MAX_LENGTH} characters.`),
 })
 
 export function ContactForm() {
@@ -79,25 +81,22 @@ export function ContactForm() {
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <form id='form-rhf-demo' onSubmit={form.handleSubmit(onSubmit)}>
+        <form id='contact-form' onSubmit={form.handleSubmit(onSubmit)}>
           <FieldGroup>
             <Controller
               name='name'
               control={form.control}
               render={({ field, fieldState }) => (
                 <Field data-invalid={fieldState.invalid}>
-                  <FieldLabel
-                    htmlFor='form-rhf-demo-title'
-                    className='text-black'
-                  >
-                   Full Name*
+                  <FieldLabel htmlFor='name-title' className='text-black'>
+                    Full Name*
                   </FieldLabel>
                   <Input
                     {...field}
-                    id='form-rhf-demo-title'
+                    id='name-title'
                     aria-invalid={fieldState.invalid}
-                    placeholder='Login button not working on mobile'
-                    className="text-black"
+                    placeholder='John Doe'
+                    className='text-black'
                     autoComplete='off'
                   />
                   {fieldState.invalid && (
@@ -114,15 +113,12 @@ export function ContactForm() {
               control={form.control}
               render={({ field, fieldState }) => (
                 <Field data-invalid={fieldState.invalid}>
-                  <FieldLabel
-                    htmlFor='form-rhf-demo-email'
-                    className='text-black'
-                  >
-                   Email*
+                  <FieldLabel htmlFor='email' className='text-black'>
+                    Email*
                   </FieldLabel>
                   <Input
                     {...field}
-                    id='form-rhf-demo-email'
+                    id='email'
                     aria-invalid={fieldState.invalid}
                     placeholder='example@gmail.com'
                     autoComplete='off'
@@ -142,30 +138,27 @@ export function ContactForm() {
               control={form.control}
               render={({ field, fieldState }) => (
                 <Field data-invalid={fieldState.invalid}>
-                  <FieldLabel
-                    htmlFor='form-rhf-demo-message'
-                    className='text-black'
-                  >
+                  <FieldLabel htmlFor='message' className='text-black'>
                     Message*
                   </FieldLabel>
                   <InputGroup>
                     <InputGroupTextarea
                       {...field}
-                      id='form-rhf-demo-message'
-                      placeholder="Write your message here..."
+                      id='message'
+                      placeholder='Write your message here...'
                       rows={6}
                       className='min-h-24 resize-none text-black'
                       aria-invalid={fieldState.invalid}
                     />
                     <InputGroupAddon align='block-end'>
                       <InputGroupText className='tabular-nums'>
-                        {field.value.length}/100 characters
+                        {field.value.length}/{MESSAGE_MAX_LENGTH} characters
                       </InputGroupText>
                     </InputGroupAddon>
                   </InputGroup>
                   <FieldDescription>
-                    Include steps to reproduce, expected behavior, and what
-                    actually happened.
+                    Tell us how we can help — questions about reservations,
+                    events, or general inquiries.
                   </FieldDescription>
                   {fieldState.invalid && (
                     <FieldError
@@ -184,10 +177,22 @@ export function ContactForm() {
           orientation='horizontal'
           className='flex flex-row items-center justify-start w-full px-4 '
         >
-          <Button type='button'  onClick={() => form.reset()} className={cn("h-12 w-fit px-8 text-xl bg-background/60 text-background-foreground hover:bg-secondary transition-all duration-600 border-2 border-primary rounded-bl-none rounded-tr-none rounded-br-3xl rounded-tl-3xl focus:bg-primary cursor-pointer")}>
+          <Button
+            type='button'
+            onClick={() => form.reset()}
+            className={cn(
+              "h-12 w-fit px-8 text-xl bg-background/60 text-background-foreground hover:bg-secondary transition-all duration-600 border-2 border-primary rounded-bl-none rounded-tr-none rounded-br-3xl rounded-tl-3xl focus:bg-primary cursor-pointer",
+            )}
+          >
             Reset
           </Button>
-          <Button type='submit' form='form-rhf-demo' className={cn("h-12 w-fit px-8 text-xl bg-background text-background-foreground hover:bg-secondary transition-all duration-600 border-2 border-primary rounded-bl-none rounded-tr-none rounded-br-3xl rounded-tl-3xl focus:bg-primary cursor-pointer")}>
+          <Button
+            type='submit'
+            form='contact-form'
+            className={cn(
+              "h-12 w-fit px-8 text-xl bg-background text-background-foreground hover:bg-secondary transition-all duration-600 border-2 border-primary rounded-bl-none rounded-tr-none rounded-br-3xl rounded-tl-3xl focus:bg-primary cursor-pointer",
+            )}
+          >
             Submit
           </Button>
         </Field>

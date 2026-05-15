@@ -1,9 +1,9 @@
-"use server";
+"use server"
 
-import { neon } from "@neondatabase/serverless";
+import { neon } from "@neondatabase/serverless"
 
 export async function getAdminDashboardData() {
-  const sql = neon(process.env.DATABASE_URL!);
+  const sql = neon(process.env.DATABASE_URL!)
 
   const [users, reservations] = await Promise.all([
     sql`
@@ -25,7 +25,7 @@ export async function getAdminDashboardData() {
       LEFT JOIN neon_auth."user" u ON u.id::text = r.userid
       ORDER BY r.date ASC, r.time ASC
     `,
-  ]);
+  ])
 
-  return { error: null, users, reservations };
+  return { error: null, users, reservations }
 }

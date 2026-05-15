@@ -1,4 +1,4 @@
-import DinnerMenu from "@/components/DinnerMenu";
+import DinnerMenu from "@/components/DinnerMenu"
 import HeroMenu from "@/components/HeroMenu"
 
 const MenuPage = () => {
@@ -10,4 +10,4 @@ const MenuPage = () => {
   )
 }
 
-export default MenuPage;
+export default MenuPage

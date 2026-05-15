@@ -65,27 +65,46 @@ const Events = () => {
                   fill
                   className={`object-cover transition-transform duration-500 group-hover/img:scale-110 `}
                   sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw'
-                  loading="eager"
-                  
+                  loading='eager'
                 />
                 <div
                   className={`absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent transition-opacity duration-500 `}
                 />
-                
               </div>
-              <div
-                  className={`flex flex-col items-start justify-center gap-4`}
-                >
-                  <h3 className='text-3xl md:text-4xl text-primary font-playfair font-bold mb-2'>
-                    {event.title}
-                  </h3>
-                  <p className='text-lg md:text-xl  text-text/80'>{event.description}</p>
-                  <div className='flex flex-col items-start justify-center gap-2'>
-                    <p className='text-lg md:text-xl  text-text/80'><CgCalendarDates className="inline-block mr-4" size={20} color="var(--color-primary)" />{event.deadline}</p>
-                    <p className='text-lg md:text-xl  text-text/80'><FcAlarmClock className="inline-block mr-4" size={20} color="var(--color-primary)" />{event.timing}</p>
-                    <p className='text-lg md:text-xl  text-text/80'><FiCheckCircle className="inline-block mr-4" size={20} color="var(--color-primary)" />{event.offer}</p>
-                  </div>
+              <div className={`flex flex-col items-start justify-center gap-4`}>
+                <h3 className='text-3xl md:text-4xl text-primary font-playfair font-bold mb-2'>
+                  {event.title}
+                </h3>
+                <p className='text-lg md:text-xl  text-text/80'>
+                  {event.description}
+                </p>
+                <div className='flex flex-col items-start justify-center gap-2'>
+                  <p className='text-lg md:text-xl  text-text/80'>
+                    <CgCalendarDates
+                      className='inline-block mr-4'
+                      size={20}
+                      color='var(--color-primary)'
+                    />
+                    {event.deadline}
+                  </p>
+                  <p className='text-lg md:text-xl  text-text/80'>
+                    <FcAlarmClock
+                      className='inline-block mr-4'
+                      size={20}
+                      color='var(--color-primary)'
+                    />
+                    {event.timing}
+                  </p>
+                  <p className='text-lg md:text-xl  text-text/80'>
+                    <FiCheckCircle
+                      className='inline-block mr-4'
+                      size={20}
+                      color='var(--color-primary)'
+                    />
+                    {event.offer}
+                  </p>
                 </div>
+              </div>
             </div>
           </div>
         ))}

@@ -18,8 +18,8 @@ const ContactInfo = () => {
           alt='About-As'
           fill
           className='object-cover rounded-xl'
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          loading="eager"
+          sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+          loading='eager'
           priority={true}
         />
       </div>
@@ -30,9 +30,7 @@ const ContactInfo = () => {
         <div className='flex flex-col items-start justify-center gap-4'>
           <p>📞 Phone: +48 518 559 825</p>
           <p>📧 Email: ajarek@poczta.onet.pl</p>
-          <p>
-            📍 Address: ul. Europejska 2, 78-100 Kołobrzeg, Polska
-          </p>
+          <p>📍 Address: ul. Europejska 2, 78-100 Kołobrzeg, Polska</p>
         </div>
       </div>
     </div>

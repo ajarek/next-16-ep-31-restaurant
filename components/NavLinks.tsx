@@ -3,8 +3,13 @@ import { cn } from "@/lib/utils"
 import { usePathname } from "next/navigation"
 import Link from "next/link"
 import SpecialButton from "./SpecialButton"
+import { useSession } from "@/lib/auth-client"
+import type { AuthUser } from "@/types/auth"
 
 const NavLinks = ({isMobile}: {isMobile?: boolean}) => {
+  const { data: session } = useSession()
+  const user = session?.user as AuthUser | undefined
+  const isAdmin = user?.role === "admin"
   const pathname = usePathname()
   return (
     <nav
@@ -31,7 +36,15 @@ const NavLinks = ({isMobile}: {isMobile?: boolean}) => {
           <span>{link.label}</span>
         </Link>
       ))}
-      <SpecialButton link='/reservation' label='Reservation'  />
+      <SpecialButton link='/reservation' label='Reservation'  /> 
+       {isAdmin&&(
+        <Link
+          href='/admin'
+          className='text-lg'
+        >
+          Admin
+        </Link>
+        )}
     </nav>
   )
 }

@@ -86,9 +86,9 @@ const OurMenu = () => {
             ))}
         </div>
       </div>
-        <div className='w-full flex items-center justify-center gap-4 mt-6 md:mt-12'>
-          <SpecialButton link='/menu' label='See Full Menu' />
-        </div>
+      <div className='w-full flex items-center justify-center gap-4 mt-6 md:mt-12'>
+        <SpecialButton link='/menu' label='See Full Menu' />
+      </div>
     </section>
   )
 }

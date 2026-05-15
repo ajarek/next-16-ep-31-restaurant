@@ -48,15 +48,19 @@ const DinnerMenu = () => {
                       loading='lazy'
                     />
                   </DialogTrigger>
-                  <DialogContent className="max-w-full md:max-w-lg">
+                  <DialogContent className='max-w-full md:max-w-lg'>
                     <DialogHeader>
-                      <DialogTitle className="text-xl">{item.title}</DialogTitle>
-                      <DialogDescription className="text-foreground">{item.description}</DialogDescription>
+                      <DialogTitle className='text-xl'>
+                        {item.title}
+                      </DialogTitle>
+                      <DialogDescription className='text-foreground'>
+                        {item.description}
+                      </DialogDescription>
                       <p className='w-fit text-sm  p-2 border border-primary my-4 rounded-md'>
                         {item.info}
                       </p>
                       <p className='w-fit text-lg   my-4 rounded-md'>
-                       Price: ${item.price.toFixed(2)}
+                        Price: ${item.price.toFixed(2)}
                       </p>
                     </DialogHeader>
                     <Image
@@ -71,8 +75,10 @@ const DinnerMenu = () => {
                 </Dialog>
               </CardHeader>
               <CardContent>
-                <CardTitle className="text-xl">{item.title}</CardTitle>
-                <CardDescription className="text-foreground">{item.description}</CardDescription>
+                <CardTitle className='text-xl'>{item.title}</CardTitle>
+                <CardDescription className='text-foreground'>
+                  {item.description}
+                </CardDescription>
                 <p className='w-fit text-sm  p-2 border border-primary my-4 rounded-md'>
                   {item.info}
                 </p>
@@ -80,7 +86,7 @@ const DinnerMenu = () => {
               <CardFooter>
                 <CardAction className='w-full flex items-center justify-between text-primary '>
                   <p>Price</p>
-                  <p className="text-lg">${item.price.toFixed(2)}</p>
+                  <p className='text-lg'>${item.price.toFixed(2)}</p>
                 </CardAction>
               </CardFooter>
             </Card>
@@ -100,7 +106,7 @@ const DinnerMenu = () => {
         {menuDinner
           .filter((item) => item.category === "Main Course")
           .map((item) => (
-           <Card key={item.id} className='w-full'>
+            <Card key={item.id} className='w-full'>
               <CardHeader>
                 <Dialog>
                   <DialogTrigger asChild>
@@ -113,15 +119,19 @@ const DinnerMenu = () => {
                       loading='lazy'
                     />
                   </DialogTrigger>
-                  <DialogContent className="max-w-full md:max-w-lg">
+                  <DialogContent className='max-w-full md:max-w-lg'>
                     <DialogHeader>
-                      <DialogTitle className="text-xl">{item.title}</DialogTitle>
-                      <DialogDescription className="text-foreground">{item.description}</DialogDescription>
+                      <DialogTitle className='text-xl'>
+                        {item.title}
+                      </DialogTitle>
+                      <DialogDescription className='text-foreground'>
+                        {item.description}
+                      </DialogDescription>
                       <p className='w-fit text-sm  p-2 border border-primary my-4 rounded-md'>
                         {item.info}
                       </p>
                       <p className='w-fit text-lg   my-4 rounded-md'>
-                       Price: ${item.price.toFixed(2)}
+                        Price: ${item.price.toFixed(2)}
                       </p>
                     </DialogHeader>
                     <Image
@@ -136,8 +146,10 @@ const DinnerMenu = () => {
                 </Dialog>
               </CardHeader>
               <CardContent>
-                <CardTitle className="text-xl">{item.title}</CardTitle>
-                <CardDescription className="text-foreground">{item.description}</CardDescription>
+                <CardTitle className='text-xl'>{item.title}</CardTitle>
+                <CardDescription className='text-foreground'>
+                  {item.description}
+                </CardDescription>
                 <p className='w-fit text-sm  p-2 border border-primary my-4 rounded-md'>
                   {item.info}
                 </p>
@@ -145,7 +157,7 @@ const DinnerMenu = () => {
               <CardFooter>
                 <CardAction className='w-full flex items-center justify-between text-primary '>
                   <p>Price</p>
-                  <p className="text-lg">${item.price.toFixed(2)}</p>
+                  <p className='text-lg'>${item.price.toFixed(2)}</p>
                 </CardAction>
               </CardFooter>
             </Card>
@@ -173,15 +185,19 @@ const DinnerMenu = () => {
                       loading='lazy'
                     />
                   </DialogTrigger>
-                  <DialogContent className="max-w-full md:max-w-lg">
+                  <DialogContent className='max-w-full md:max-w-lg'>
                     <DialogHeader>
-                      <DialogTitle className="text-xl">{item.title}</DialogTitle>
-                      <DialogDescription className="text-foreground">{item.description}</DialogDescription>
+                      <DialogTitle className='text-xl'>
+                        {item.title}
+                      </DialogTitle>
+                      <DialogDescription className='text-foreground'>
+                        {item.description}
+                      </DialogDescription>
                       <p className='w-fit text-sm  p-2 border border-primary my-4 rounded-md'>
                         {item.info}
                       </p>
                       <p className='w-fit text-lg   my-4 rounded-md'>
-                       Price: ${item.price.toFixed(2)}
+                        Price: ${item.price.toFixed(2)}
                       </p>
                     </DialogHeader>
                     <Image
@@ -196,8 +212,10 @@ const DinnerMenu = () => {
                 </Dialog>
               </CardHeader>
               <CardContent>
-                <CardTitle className="text-xl">{item.title}</CardTitle>
-                <CardDescription className="text-foreground">{item.description}</CardDescription>
+                <CardTitle className='text-xl'>{item.title}</CardTitle>
+                <CardDescription className='text-foreground'>
+                  {item.description}
+                </CardDescription>
                 <p className='w-fit text-sm  p-2 border border-primary my-4 rounded-md'>
                   {item.info}
                 </p>
@@ -205,7 +223,7 @@ const DinnerMenu = () => {
               <CardFooter>
                 <CardAction className='w-full flex items-center justify-between text-primary '>
                   <p>Price</p>
-                  <p className="text-lg">${item.price.toFixed(2)}</p>
+                  <p className='text-lg'>${item.price.toFixed(2)}</p>
                 </CardAction>
               </CardFooter>
             </Card>
@@ -220,7 +238,7 @@ const DinnerMenu = () => {
         {menuDinner
           .filter((item) => item.category === "Drinks")
           .map((item) => (
-           <Card key={item.id} className='w-full'>
+            <Card key={item.id} className='w-full'>
               <CardHeader>
                 <Dialog>
                   <DialogTrigger asChild>
@@ -233,15 +251,19 @@ const DinnerMenu = () => {
                       loading='lazy'
                     />
                   </DialogTrigger>
-                  <DialogContent className="max-w-full md:max-w-lg">
+                  <DialogContent className='max-w-full md:max-w-lg'>
                     <DialogHeader>
-                      <DialogTitle className="text-xl">{item.title}</DialogTitle>
-                      <DialogDescription className="text-foreground">{item.description}</DialogDescription>
-                       <p className='w-fit text-sm  p-2 border border-primary my-4 rounded-md'>
+                      <DialogTitle className='text-xl'>
+                        {item.title}
+                      </DialogTitle>
+                      <DialogDescription className='text-foreground'>
+                        {item.description}
+                      </DialogDescription>
+                      <p className='w-fit text-sm  p-2 border border-primary my-4 rounded-md'>
                         {item.info}
                       </p>
                       <p className='w-fit text-lg   my-4 rounded-md'>
-                       Price: ${item.price.toFixed(2)}
+                        Price: ${item.price.toFixed(2)}
                       </p>
                     </DialogHeader>
                     <Image
@@ -256,8 +278,10 @@ const DinnerMenu = () => {
                 </Dialog>
               </CardHeader>
               <CardContent>
-                <CardTitle className="text-xl">{item.title}</CardTitle>
-                <CardDescription className="text-foreground">{item.description}</CardDescription>
+                <CardTitle className='text-xl'>{item.title}</CardTitle>
+                <CardDescription className='text-foreground'>
+                  {item.description}
+                </CardDescription>
                 <p className='w-fit text-sm  p-2 border border-primary my-4 rounded-md'>
                   {item.info}
                 </p>
@@ -265,7 +289,7 @@ const DinnerMenu = () => {
               <CardFooter>
                 <CardAction className='w-full flex items-center justify-between text-primary '>
                   <p>Price</p>
-                  <p className="text-lg">${item.price.toFixed(2)}</p>
+                  <p className='text-lg'>${item.price.toFixed(2)}</p>
                 </CardAction>
               </CardFooter>
             </Card>

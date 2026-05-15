@@ -1,7 +1,13 @@
 import { createAuthClient } from "better-auth/react"
 
+const baseURL = process.env.NEXT_PUBLIC_AUTH_BASE_URL
+
+if (!baseURL) {
+  throw new Error("Missing NEXT_PUBLIC_AUTH_BASE_URL environment variable")
+}
+
 export const authClient = createAuthClient({
-    baseURL: "https://ep-ancient-wildflower-aje8bn46.neonauth.c-3.us-east-2.aws.neon.tech/neondb/auth",
+    baseURL,
 });
 
 export const { signIn, signUp, signOut, useSession } = authClient;

@@ -118,9 +118,11 @@ function AdminLoginForm() {
           <p className='text-zinc-400 mt-2 text-sm'>
             Still Sea Restaurant • Access only for administrators
           </p>
-          <div className="flex items-center justify-center gap-2 mt-2">
+          <div className='flex items-center justify-center gap-2 mt-2'>
             <MoveLeft className='w-4 h-4 text-amber-500' />
-            <Link href="/" className="text-amber-500 text-center">Back to Home</Link>
+            <Link href='/' className='text-amber-500 text-center'>
+              Back to Home
+            </Link>
           </div>
         </div>
 
@@ -170,7 +172,6 @@ function AdminLoginForm() {
           </button>
         </form>
       </div>
-        
     </div>
   )
 }
@@ -179,7 +180,7 @@ function AdminDashboard({ userName }: { userName: string; userRole?: string }) {
   const [data, setData] = useState<DashboardData | null>(null)
   const [loading, setLoading] = useState(true)
   const [tab, setTab] = useState<"reservations" | "users">("reservations")
-console.log(data)
+  console.log(data)
   const loadData = useCallback(async () => {
     try {
       const result = await getAdminDashboardData()
@@ -189,7 +190,7 @@ console.log(data)
         reservations: result.reservations as Reservation[],
       })
     } catch (err) {
-      toast.error("Nie udało się pobrać danych"+err)
+      toast.error("Nie udało się pobrać danych" + err)
     } finally {
       setLoading(false)
     }
@@ -197,19 +198,19 @@ console.log(data)
 
   useEffect(() => {
     // Używamy flagi, aby uniknąć wyścigu (race condition)
-    let isMounted = true;
-    
+    let isMounted = true
+
     const fetchData = async () => {
       if (isMounted) {
-        await loadData();
+        await loadData()
       }
-    };
+    }
 
-    fetchData();
+    fetchData()
 
     return () => {
-      isMounted = false;
-    };
+      isMounted = false
+    }
   }, [loadData])
 
   return (
@@ -234,7 +235,10 @@ console.log(data)
             <span className='text-sm text-zinc-300 font-medium'>
               {userName} as admin
             </span>
-            <Link href="/" className='text-xs bg-amber-500/15 text-amber-400 border border-amber-500/25 rounded-full px-2 py-0.5 font-medium'>
+            <Link
+              href='/'
+              className='text-xs bg-amber-500/15 text-amber-400 border border-amber-500/25 rounded-full px-2 py-0.5 font-medium'
+            >
               Home
             </Link>
           </div>
@@ -387,23 +391,23 @@ console.log(data)
                               {fmt(r.created_at)} {fmtTime(r.created_at)}
                             </td>
                             <td className='px-5 py-3.5'>
-                                <button
-                                  onClick={async () => {
-                                    const id = r.id.toString()
-                                    toast.promise(removeReservation(id), {
-                                      loading: 'Deleting...',
-                                      success: () => {
-                                        setLoading(true) // Tutaj można bezpiecznie ustawić loading
-                                        loadData()
-                                        return 'Reservation deleted'
-                                      },
-                                      error: 'Failed to delete reservation'
-                                    })
-                                  }}
-                                  className='bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded'
-                                >
-                                  Remove
-                                </button>
+                              <button
+                                onClick={async () => {
+                                  const id = r.id.toString()
+                                  toast.promise(removeReservation(id), {
+                                    loading: "Deleting...",
+                                    success: () => {
+                                      setLoading(true) // Tutaj można bezpiecznie ustawić loading
+                                      loadData()
+                                      return "Reservation deleted"
+                                    },
+                                    error: "Failed to delete reservation",
+                                  })
+                                }}
+                                className='bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded'
+                              >
+                                Remove
+                              </button>
                             </td>
                           </tr>
                         ))

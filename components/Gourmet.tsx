@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import SpecialButton from './SpecialButton'
+import Image from "next/image"
+import SpecialButton from "./SpecialButton"
 
 const Gourmet = () => {
   return (
@@ -13,7 +13,6 @@ const Gourmet = () => {
         priority
       />
 
-
       <div className='absolute md:left-60 md:right-60 left-4 right-4 md:h-90 h-80 flex items-center justify-between bg-primary/60 p-4 border-4 border-primary rounded-bl-none rounded-tr-none rounded-br-[100px] rounded-tl-[100px]'>
         <div className='relative w-full md:max-w-[185px] md:h-full h-12 '>
           <Image
@@ -26,10 +25,20 @@ const Gourmet = () => {
           />
         </div>
         <div className='text-white text-center'>
-          <h1 className='text-2xl md:text-5xl text-foreground font-bold mb-4'>Your Gourmet Moment Starts Here</h1>
+          <h1 className='text-2xl md:text-5xl text-foreground font-bold mb-4'>
+            Your Gourmet Moment Starts Here
+          </h1>
           <div className='text-xl flex flex-col md:flex-row items-center justify-center gap-4'>
-            <SpecialButton label="Book Your Table" link='/reservation' className='bg-secondary text-secondary-foreground ' />
-            <SpecialButton label="View Menu" link='/menu' className='bg-secondary text-secondary-foreground ' />
+            <SpecialButton
+              label='Book Your Table'
+              link='/reservation'
+              className='bg-secondary text-secondary-foreground '
+            />
+            <SpecialButton
+              label='View Menu'
+              link='/menu'
+              className='bg-secondary text-secondary-foreground '
+            />
           </div>
         </div>
         <div className='relative w-full md:max-w-[185px] md:h-full h-12'>

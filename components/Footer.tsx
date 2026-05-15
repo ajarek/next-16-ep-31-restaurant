@@ -30,8 +30,8 @@ export default function Footer() {
           </p>
         </div>
 
-<div className='flex flex-col gap-10 md:w-2/3 md:items-end'>
-<nav
+        <div className='flex flex-col gap-10 md:w-2/3 md:items-end'>
+          <nav
             role='navigation'
             className='flex flex-wrap md:justify-end gap-x-8 gap-y-4 font-semibold text-sm tracking-wide'
           >
@@ -46,8 +46,8 @@ export default function Footer() {
             ))}
           </nav>
 
-<div className='flex flex-col sm:flex-row justify-between md:justify-end gap-10 md:gap-24 w-full'>
-<div className='flex flex-col gap-5'>
+          <div className='flex flex-col sm:flex-row justify-between md:justify-end gap-10 md:gap-24 w-full'>
+            <div className='flex flex-col gap-5'>
               <div className='flex items-center gap-4'>
                 <div className='border border-primary rounded p-2 text-primary flex items-center justify-center'>
                   <Phone size={18} strokeWidth={1.5} />
@@ -76,7 +76,7 @@ export default function Footer() {
               </div>
             </div>
 
-<div className='flex flex-col gap-5 sm:items-end'>
+            <div className='flex flex-col gap-5 sm:items-end'>
               <Link
                 href='#'
                 aria-label='Facebook'
@@ -118,13 +118,13 @@ export default function Footer() {
         </div>
       </div>
 
-<div className='max-w-7xl mx-auto px-6 pb-10'>
+      <div className='max-w-7xl mx-auto px-6 pb-10'>
         <div className='relative flex items-center justify-center py-8'>
           <Separator className='bg-primary w-full h-px' />
           <div className='absolute bg-background px-3'>
             <Image
               src='/images-home/logo.webp'
-              alt='Vercel Logo'
+              alt='Still Sea Logo'
               width={40}
               height={40}
               className='object-contain rounded-full'

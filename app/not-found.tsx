@@ -9,11 +9,11 @@ export default function NotFound() {
         <div className='relative text-2xl group-hover:scale-110 transition-transform duration-300'>
           <Image
             src='/images-home/logo.webp'
-            alt='Vercel Logo'
+            alt='Still Sea Logo'
             width={220}
             height={220}
             className='object-contain rounded-full'
-            loading="eager"
+            loading='eager'
           />
           <div className='absolute inset-0 bg-red-500/50 w-full h-full rounded-full'></div>
         </div>

@@ -13,22 +13,26 @@ const testimonialArray = [
   {
     id: 1,
     name: "John Doe",
-    content: '“We celebrated our anniversary here and it was magical. Romantic setting, delicious food, and warm hospitality — Still Sea made our night perfect.”',
+    content:
+      "“We celebrated our anniversary here and it was magical. Romantic setting, delicious food, and warm hospitality — Still Sea made our night perfect.”",
   },
   {
     id: 2,
     name: "Jane Smith",
-    content: '"Still Sea turned our dinner into a delight! The flavors were rich, service was top-notch, and the ambiance was cozy. Can’t wait to return!"',
+    content:
+      '"Still Sea turned our dinner into a delight! The flavors were rich, service was top-notch, and the ambiance was cozy. Can’t wait to return!"',
   },
   {
     id: 3,
     name: "Bob Johnson",
-    content: '"From starters to dessert, everything at Still Sea was incredible. Friendly staff and an unforgettable experience. Highly recommended!"',
+    content:
+      '"From starters to dessert, everything at Still Sea was incredible. Friendly staff and an unforgettable experience. Highly recommended!"',
   },
   {
     id: 4,
     name: "Alice Williams",
-    content: '“We celebrated our anniversary here and it was magical. Romantic setting, delicious food, and warm hospitality — Still Sea made our night perfect.”',
+    content:
+      "“We celebrated our anniversary here and it was magical. Romantic setting, delicious food, and warm hospitality — Still Sea made our night perfect.”",
   },
 ]
 

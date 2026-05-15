@@ -37,7 +37,7 @@ export function SheetNav() {
               <div className='text-2xl group-hover:scale-110 transition-transform duration-300'>
                 <Image
                   src='/images-home/logo.webp'
-                  alt='Vercel Logo'
+                  alt='Still Sea Logo'
                   width={50}
                   height={50}
                   className='object-contain rounded-full'
@@ -49,7 +49,7 @@ export function SheetNav() {
           </SheetTitle>
         </SheetHeader>
         <div className='flex flex-col items-start gap-4 text-xl italic font-semibold p-4'>
-          <NavLinks isMobile={true}/>
+          <NavLinks isMobile={true} />
         </div>
       </SheetContent>
     </Sheet>
