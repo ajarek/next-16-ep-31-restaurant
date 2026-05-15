@@ -37,8 +37,7 @@ const Gallery = () => {
         </p>
       </div>
 
-      {/* Infinite scrolling gallery container */}
-      <div className='relative flex overflow-x-hidden w-full group py-4'>
+<div className='relative flex overflow-x-hidden w-full group py-4'>
         <div className='flex animate-marquee group-hover:pause'>
           {[...images, ...images].map((src, index) => (
             <div 
@@ -59,8 +58,7 @@ const Gallery = () => {
         </div>
       </div>
 
-      {/* Image Modal overlay */}
-      {selectedImage && (
+{selectedImage && (
         <div 
           className='fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4'
           onClick={() => setSelectedImage(null)}

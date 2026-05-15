@@ -1,5 +1,4 @@
 import Image from "next/image"
-import SpecialButton from "./SpecialButton"
 import { TypewriterEffect } from "./ui/typewriter-effect";
 const words = [
     {

@@ -39,8 +39,7 @@ const OurChefs = () => {
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 w-full place-items-center mt-8'>
         {chefs.map((chef, index) => (
           <div key={index} className='flex flex-col items-center gap-8 group'>
-            {/* Frame container with sketchy border effect */}
-            <div
+<div
               className='relative p-2.5 bg-background transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105'
               style={{
                 borderRadius: "255px 15px 225px 15px/15px 225px 15px 255px",
@@ -48,8 +47,7 @@ const OurChefs = () => {
                 boxShadow: "0 10px 30px -10px rgba(0,0,0,0.5)",
               }}
             >
-              {/* Inner image container */}
-              <div
+<div
                 className={`relative w-[280px] h-[360px] overflow-hidden ${chef.imageRadius} transition-all duration-500 shadow-inner`}
               >
                 <Image
@@ -60,17 +58,14 @@ const OurChefs = () => {
                   sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                 />
 
-                {/* Overlay on hover */}
-                <div className='absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 mix-blend-overlay'></div>
+<div className='absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 mix-blend-overlay'></div>
               </div>
 
-              {/* Decorative corner elements */}
-              <div className='absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-primary opacity-60 -translate-x-3 -translate-y-3 transition-transform duration-500 group-hover:-translate-x-4 group-hover:-translate-y-4'></div>
+<div className='absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-primary opacity-60 -translate-x-3 -translate-y-3 transition-transform duration-500 group-hover:-translate-x-4 group-hover:-translate-y-4'></div>
               <div className='absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-primary opacity-60 translate-x-3 translate-y-3 transition-transform duration-500 group-hover:translate-x-4 group-hover:translate-y-4'></div>
             </div>
 
-            {/* Chef info */}
-            <div className='text-center space-y-2 mt-2'>
+<div className='text-center space-y-2 mt-2'>
               <h3 className='text-2xl font-serif font-bold text-foreground group-hover:text-primary transition-colors duration-300'>
                 {chef.name}
               </h3>

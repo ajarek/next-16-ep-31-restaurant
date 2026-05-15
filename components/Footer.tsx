@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Flame, Phone, Mail, MapPin } from "lucide-react"
+import { Phone, Mail, MapPin } from "lucide-react"
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa6"
 import { Separator } from "@/components/ui/separator"
 import { navLinks } from "@/data/nav-links"
@@ -9,7 +9,6 @@ export default function Footer() {
   return (
     <footer className='w-full bg-background mt-24 px-8 sm:px-16 lg:px-24'>
       <div className='  py-12 flex flex-col md:flex-row justify-between gap-12'>
-        {/* Left Section - Logo & Description */}
         <div className='flex flex-col gap-6 max-w-sm'>
           <Link href='/' className='flex items-center gap-3' aria-label='Home'>
             <Image
@@ -31,10 +30,8 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Right Section - Nav & Contact */}
-        <div className='flex flex-col gap-10 md:w-2/3 md:items-end'>
-          {/* Navigation Links */}
-          <nav
+<div className='flex flex-col gap-10 md:w-2/3 md:items-end'>
+<nav
             role='navigation'
             className='flex flex-wrap md:justify-end gap-x-8 gap-y-4 font-semibold text-sm tracking-wide'
           >
@@ -49,10 +46,8 @@ export default function Footer() {
             ))}
           </nav>
 
-          {/* Contact Info & Socials */}
-          <div className='flex flex-col sm:flex-row justify-between md:justify-end gap-10 md:gap-24 w-full'>
-            {/* Contact Info */}
-            <div className='flex flex-col gap-5'>
+<div className='flex flex-col sm:flex-row justify-between md:justify-end gap-10 md:gap-24 w-full'>
+<div className='flex flex-col gap-5'>
               <div className='flex items-center gap-4'>
                 <div className='border border-primary rounded p-2 text-primary flex items-center justify-center'>
                   <Phone size={18} strokeWidth={1.5} />
@@ -81,8 +76,7 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Social Links */}
-            <div className='flex flex-col gap-5 sm:items-end'>
+<div className='flex flex-col gap-5 sm:items-end'>
               <Link
                 href='#'
                 aria-label='Facebook'
@@ -124,8 +118,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Divider & Copyright Section */}
-      <div className='max-w-7xl mx-auto px-6 pb-10'>
+<div className='max-w-7xl mx-auto px-6 pb-10'>
         <div className='relative flex items-center justify-center py-8'>
           <Separator className='bg-primary w-full h-px' />
           <div className='absolute bg-background px-3'>

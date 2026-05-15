@@ -7,7 +7,7 @@ import useEmblaCarousel, {
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
-import { ChevronLeftIcon, ChevronRightIcon, Utensils } from "lucide-react"
+import { Utensils } from "lucide-react"
 
 type CarouselApi = UseEmblaCarouselType[1]
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>
@@ -95,9 +95,14 @@ function Carousel({
 
   React.useEffect(() => {
     if (!api) return
-    onSelect(api)
+
     api.on("reInit", onSelect)
     api.on("select", onSelect)
+
+    // Use startTransition to avoid cascading renders from initial state sync
+    React.startTransition(() => {
+      onSelect(api)
+    })
 
     return () => {
       api?.off("select", onSelect)

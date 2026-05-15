@@ -5,8 +5,12 @@ import { SheetNav } from "./SheetNav"
 import { AnimatedThemeToggler } from "./ui/animated-theme-toggler"
 import Image from "next/image"
 import NavLinks from "./NavLinks"
+import { useSession } from "@/lib/auth-client"
 
 const Navbar = () => {
+  const { data: session } = useSession()
+  const isAdmin = (session?.user as any)?.role === "admin"
+
   return (
     <nav role="navigation" className='fixed top-0 z-50 h-24 bg-background/50 backdrop-blur-md w-full border-b-2 flex justify-between items-center px-4 md:px-8'>
       <Link
@@ -43,6 +47,14 @@ const Navbar = () => {
           <SheetNav />
           <AnimatedThemeToggler />
         </div>
+        {isAdmin&&(
+        <Link
+          href='/admin'
+          className='text-lg'
+        >
+          Admin
+        </Link>
+        )}
       </div>
     </nav>
   )

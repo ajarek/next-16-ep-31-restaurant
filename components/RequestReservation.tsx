@@ -31,9 +31,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 
-// Import Auth Client
 import { useSession, signIn, signUp, signOut } from "@/lib/auth-client";
-// Import Server Action
 import { createReservation } from "@/app/actions/reservation";
 
 const timeSlots = [
@@ -62,8 +60,7 @@ const RequestReservation = () => {
   const [authMode, setAuthMode] = useState<"login" | "signup">("login");
   const [authLoading, setAuthLoading] = useState(false);
 
-  // Auth Forms States
-  const [email, setEmail] = useState("");
+const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
 
@@ -77,8 +74,7 @@ const RequestReservation = () => {
     },
   });
 
-  // Pre-fill nameReservation if session is available
-  useEffect(() => {
+useEffect(() => {
     if (session?.user?.name) {
       form.setValue("nameReservation", session.user.name);
     }
@@ -118,7 +114,7 @@ const RequestReservation = () => {
     setAuthLoading(true);
     
     if (authMode === "signup") {
-      const { data, error } = await signUp.email({
+      const { error } = await signUp.email({
         email,
         password,
         name,
@@ -129,7 +125,7 @@ const RequestReservation = () => {
         toast.success("Account created! You are now logged in.");
       }
     } else {
-      const { data, error } = await signIn.email({
+      const { error } = await signIn.email({
         email,
         password,
       });
@@ -256,7 +252,6 @@ const RequestReservation = () => {
 
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
               <FieldGroup className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {/* Name Reservation */}
                 <Field orientation="vertical">
                   <FieldLabel>Reservation Name</FieldLabel>
                   <Controller
@@ -278,7 +273,6 @@ const RequestReservation = () => {
                   />
                 </Field>
 
-                {/* Party Size */}
                 <Field orientation="vertical">
                   <FieldLabel>Party size</FieldLabel>
                   <Controller
@@ -310,7 +304,6 @@ const RequestReservation = () => {
                   />
                 </Field>
 
-                {/* Date */}
                 <Field orientation="vertical">
                   <FieldLabel>Date</FieldLabel>
                   <Controller
@@ -349,7 +342,6 @@ const RequestReservation = () => {
                   />
                 </Field>
 
-                {/* Time */}
                 <Field orientation="vertical">
                   <FieldLabel>Time</FieldLabel>
                   <Controller
@@ -382,7 +374,6 @@ const RequestReservation = () => {
 
               <hr className="border-t border-border/60" />
 
-              {/* Time Slots */}
               <div className="space-y-4">
                 <h3 className="text-sm font-medium text-foreground">
                   Choose an available time slot:

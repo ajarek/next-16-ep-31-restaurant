@@ -13,7 +13,6 @@ export async function createReservation(data: {
   try {
     const sql = neon(process.env.DATABASE_URL!);
     
-    // date.toISOString() will be something like "2026-05-14T00:00:00.000Z", which postgres can cast to DATE.
     await sql`
       INSERT INTO reservations (partysize, date, time, timeslot, namereservation, userid)
       VALUES (${data.partySize}, ${data.date.toISOString()}, ${data.time}, ${data.timeSlot}, ${data.nameReservation}, ${data.userId})

@@ -5,8 +5,6 @@ const NEON_AUTH_BASE =
   "https://ep-ancient-wildflower-aje8bn46.neonauth.c-3.us-east-2.aws.neon.tech/neondb/auth";
 
 async function getAdminUser(request: NextRequest) {
-  // Forward ALL cookies from the incoming request to the Neon Auth /get-session endpoint.
-  // better-auth may use a different cookie name depending on configuration, so we pass everything.
   const cookieHeader = request.headers.get("cookie") ?? "";
 
   if (!cookieHeader) return null;
@@ -57,7 +55,7 @@ export async function GET(request: NextRequest) {
         r.created_at,
         u.email AS user_email
       FROM reservations r
-      LEFT JOIN neon_auth."user" u ON u.id = r.userid
+      LEFT JOIN neon_auth."user" u ON u.id::text = r.userid
       ORDER BY r.created_at DESC
     `,
   ]);

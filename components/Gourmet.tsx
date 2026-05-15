@@ -1,6 +1,4 @@
 import Image from 'next/image'
-import React from 'react'
-import { Button } from './ui/button'
 import SpecialButton from './SpecialButton'
 
 const Gourmet = () => {
@@ -15,7 +13,7 @@ const Gourmet = () => {
         priority
       />
 
-      {/* Overlay content */}
+
       <div className='absolute md:left-60 md:right-60 left-4 right-4 md:h-90 h-80 flex items-center justify-between bg-primary/60 p-4 border-4 border-primary rounded-bl-none rounded-tr-none rounded-br-[100px] rounded-tl-[100px]'>
         <div className='relative w-full md:max-w-[185px] md:h-full h-12 '>
           <Image

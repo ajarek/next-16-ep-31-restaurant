@@ -1,4 +1,3 @@
-import Hero from "@/components/HeroHome"
 import DiningOptions from "@/components/DiningOptions"
 import OurMenu from "@/components/OurMenu"
 import AboutUs from "@/components/AboutUs"
