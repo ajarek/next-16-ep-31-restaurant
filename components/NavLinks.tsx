@@ -15,7 +15,7 @@ const NavLinks = ({isMobile}: {isMobile?: boolean}) => {
     <nav
       role='navigation'
       aria-label='Main navigation'
-      className={cn("flex flex-col gap-4", !isMobile && "flex-row")}
+      className={cn("flex flex-col items-center gap-4", !isMobile && "flex-row")}
     >
       {navLinks.map((link) => (
         <Link
@@ -40,7 +40,7 @@ const NavLinks = ({isMobile}: {isMobile?: boolean}) => {
        {isAdmin&&(
         <Link
           href='/admin'
-          className='text-lg'
+          className='text-xl font-medium'
         >
           Admin
         </Link>
