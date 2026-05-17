@@ -100,7 +100,6 @@ useEffect(() => {
     if (res.success) {
       toast.success("Reservation request sent successfully!");
       form.reset();
-      await signOut();
     } else {
       toast.error(res.error || "Failed to make reservation.");
     }

@@ -1,5 +1,12 @@
+import type { Metadata } from "next"
 import HeroReservation from "@/components/HeroReservation"
 import RequestReservation from "@/components/RequestReservation"
+
+export const metadata: Metadata = {
+  title: "Reservations",
+  description:
+    "Book your table at Still Sea in Kołobrzeg. Reserve your spot for an unforgettable fine dining experience. Simple online reservation process.",
+}
 
 const ReservationPage = () => {
   return (

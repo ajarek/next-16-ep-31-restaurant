@@ -53,7 +53,7 @@ const HeroHome = () => {
             <div className='relative w-[300px] h-[250px] border-6 border-foreground rounded-bl-none rounded-tr-none rounded-br-[150px] rounded-tl-[150px] overflow-hidden'>
               <Image
                 src='/images-home/hero-2.avif'
-                alt='Vercel Logo'
+                alt='Chef preparing a gourmet dish in the kitchen'
                 fill
                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                 className='object-cover object-center'
@@ -63,7 +63,7 @@ const HeroHome = () => {
             <div className='relative w-[300px] h-[250px] border-6 border-foreground rounded-bl-none rounded-tr-none rounded-br-[150px] rounded-tl-[150px] overflow-hidden'>
               <Image
                 src='/images-home/hero-3.avif'
-                alt='Vercel Logo'
+                alt='Elegant table setting with fine dining ambiance'
                 fill
                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                 className='object-cover object-center'

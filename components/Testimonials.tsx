@@ -32,7 +32,7 @@ const testimonialArray = [
     id: 4,
     name: "Alice Williams",
     content:
-      "“We celebrated our anniversary here and it was magical. Romantic setting, delicious food, and warm hospitality — Still Sea made our night perfect.”",
+      '"The seafood platter was out of this world! Fresh, beautifully presented, and paired perfectly with an excellent wine selection. Truly a gem in Kołobrzeg!"',
   },
 ]
 

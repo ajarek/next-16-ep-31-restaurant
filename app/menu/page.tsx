@@ -1,5 +1,12 @@
+import type { Metadata } from "next"
 import DinnerMenu from "@/components/DinnerMenu"
 import HeroMenu from "@/components/HeroMenu"
+
+export const metadata: Metadata = {
+  title: "Menu",
+  description:
+    "Explore the Still Sea menu — a symphony of flavors featuring handcrafted appetizers, main courses, desserts, and drinks. Fine dining at its best in Kołobrzeg, Poland.",
+}
 
 const MenuPage = () => {
   return (

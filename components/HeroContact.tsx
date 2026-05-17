@@ -47,7 +47,7 @@ const HeroContact = () => {
           <div className='relative w-[360px]  md:w-[400px] h-[300px] md:h-[340px] border-6 border-foreground rounded-bl-none rounded-tr-none rounded-br-[150px] rounded-tl-[150px] overflow-hidden'>
             <Image
               src='/images-contact/contact-2.avif'
-              alt='Vercel Logo'
+              alt='Still Sea Restaurant dining area with elegant decor'
               fill
               sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
               className='object-cover object-center'
@@ -57,7 +57,7 @@ const HeroContact = () => {
           <div className='relative w-[360px]  md:w-[400px] h-[300px] md:h-[340px] border-6 border-foreground rounded-bl-none rounded-tr-none rounded-br-[150px] rounded-tl-[150px] overflow-hidden'>
             <Image
               src='/images-contact/contact-3.avif'
-              alt='Vercel Logo'
+              alt='Gourmet dish presentation at Still Sea Restaurant'
               fill
               sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
               className='object-cover object-center'

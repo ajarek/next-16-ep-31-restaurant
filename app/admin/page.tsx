@@ -180,7 +180,6 @@ function AdminDashboard({ userName }: { userName: string; userRole?: string }) {
   const [data, setData] = useState<DashboardData | null>(null)
   const [loading, setLoading] = useState(true)
   const [tab, setTab] = useState<"reservations" | "users">("reservations")
-  console.log(data)
   const loadData = useCallback(async () => {
     try {
       const result = await getAdminDashboardData()

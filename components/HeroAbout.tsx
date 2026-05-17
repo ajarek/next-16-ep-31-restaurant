@@ -52,7 +52,7 @@ const HeroAbout = () => {
         <div className='relative w-[300px] h-[350px] md:w-[500px] md:h-[550px] border-6 border-foreground rounded-bl-none rounded-tr-none rounded-br-[100px] rounded-tl-[100px] overflow-hidden'>
           <Image
             src='/images-about/about.avif'
-            alt='About-As'
+            alt='Still Sea Restaurant interior with warm and elegant ambiance'
             fill
             className='object-cover rounded-xl'
             sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'

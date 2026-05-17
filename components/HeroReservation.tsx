@@ -25,7 +25,7 @@ const HeroReservation = () => {
       <div className='relative w-full h-[480px] md:h-[600px] '>
         <Image
           src='/images-reservation/hero-reservation.avif'
-          alt='About-As'
+          alt='Still Sea Restaurant dining room prepared for guests'
           fill
           className='object-cover rounded-xl'
           sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'

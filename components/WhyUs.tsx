@@ -30,10 +30,10 @@ const WhyUs = () => {
               <TbSalt />
             </div>
             <h3 className='text-2xl font-bold text-primary'>
-              Elegant Ambiance
+              Exquisite Cuisine
             </h3>
             <p className='max-w-48 text-center text-lg'>
-              Warm lights and refined interior charm.
+              Fresh ingredients and masterful techniques.
             </p>
           </div>
           <div className='relative mx-auto w-[400px] h-[300px] lg:w-[650px] md:h-[450px] border-6 border-foreground rounded-bl-none rounded-tr-none rounded-br-[100px] rounded-tl-[100px] overflow-hidden'>
@@ -60,16 +60,15 @@ const WhyUs = () => {
               priority={true}
             />
           </div>
-          <div className='w-full grid grid-cols-1 md:grid-cols-2  gap-4'>
-            <div className='h-64 flex flex-col items-center justify-center gap-4 border-2 p-4 rounded-xl shadow-2xl shadow-foreground'>
+          <div className='w-full grid grid-cols-1 md:grid-cols-2  gap-4'>              <div className='h-64 flex flex-col items-center justify-center gap-4 border-2 p-4 rounded-xl shadow-2xl shadow-foreground'>
               <div className='text-4xl text-primary p-4 bg-primary/20 rounded-full'>
                 <FaBowlFood />
               </div>
               <h3 className='text-2xl font-bold text-primary'>
-                Elegant Ambiance
+                Gourmet Dining
               </h3>
               <p className='max-w-48 text-center text-lg'>
-                Warm lights and refined interior charm.
+                A culinary journey crafted with passion.
               </p>
             </div>
             <div className='h-64 flex flex-col items-center justify-center gap-4 border-2 p-4 rounded-xl shadow-2xl shadow-foreground'>
@@ -77,10 +76,10 @@ const WhyUs = () => {
                 <TbHearts />
               </div>
               <h3 className='text-2xl font-bold text-primary'>
-                Elegant Ambiance
+                Made with Love
               </h3>
               <p className='max-w-48 text-center text-lg'>
-                Warm lights and refined interior charm.
+                Every dish is prepared with heart and soul.
               </p>
             </div>
           </div>

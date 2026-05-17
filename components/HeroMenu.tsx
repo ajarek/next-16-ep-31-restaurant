@@ -24,7 +24,7 @@ const HeroMenu = () => {
       <div className='relative w-full h-[480px] md:h-[600px] '>
         <Image
           src='/images-menu/hero.avif'
-          alt='About-As'
+          alt='Still Sea Restaurant signature dish presentation'
           fill
           className='object-cover rounded-xl'
           sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
@@ -35,7 +35,7 @@ const HeroMenu = () => {
             <div className='relative w-[150px] md:w-[200px] h-[180px] md:h-[215px] border border-foreground rounded-bl-none rounded-tr-none rounded-br-[100px] rounded-tl-[100px] overflow-hidden'>
               <Image
                 src='/images-home/dining-options-1.avif'
-                alt='About-As'
+                alt='Grilled steak with roasted vegetables'
                 fill
                 className='object-cover rounded-xl'
                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
@@ -45,7 +45,7 @@ const HeroMenu = () => {
             <div className='relative w-[150px] md:w-[200px] h-[180px] md:h-[215px] border border-foreground rounded-bl-none rounded-tr-none rounded-br-[100px] rounded-tl-[100px] overflow-hidden'>
               <Image
                 src='/images-home/dining-options-2.avif'
-                alt='About-As'
+                alt='Seafood platter with fresh garnishes'
                 fill
                 className='object-cover rounded-xl'
                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
@@ -61,7 +61,7 @@ const HeroMenu = () => {
             <div className='relative w-[150px] md:w-[200px] h-[180px] md:h-[215px] border border-foreground rounded-bl-none rounded-tr-none rounded-br-[100px] rounded-tl-[100px] overflow-hidden'>
               <Image
                 src='/images-home/dining-options-3.avif'
-                alt='About-As'
+                alt='Gourmet burger with crispy fries'
                 fill
                 className='object-cover rounded-xl'
                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
@@ -71,7 +71,7 @@ const HeroMenu = () => {
             <div className='relative w-[150px] md:w-[200px] h-[180px] md:h-[215px] border border-foreground rounded-bl-none rounded-tr-none rounded-br-[100px] rounded-tl-[100px] overflow-hidden'>
               <Image
                 src='/images-home/dining-options-4.avif'
-                alt='About-As'
+                alt='Elegant dessert with fresh berries'
                 fill
                 className='object-cover rounded-xl'
                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'

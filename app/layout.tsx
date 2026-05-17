@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { Toaster } from "sonner"
+import { ThemeProvider } from "next-themes"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,8 +19,12 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Restaurant Website",
-  description: "A modern and responsive restaurant website",
+  title: {
+    template: "%s | Still Sea Restaurant",
+    default: "Still Sea Restaurant — Fine Dining in Kołobrzeg",
+  },
+  description:
+    "Experience fine dining at Still Sea in Kołobrzeg, Poland. Modern culinary artistry meets timeless elegance. Book your table for an unforgettable dining experience.",
 }
 
 export default function RootLayout({
@@ -37,14 +42,22 @@ export default function RootLayout({
         geistMono.variable,
         "font-sans",
       )}
+      suppressHydrationWarning
     >
       <body className='min-h-full flex flex-col'>
-        <TooltipProvider>
-          <Navbar />
-          <main className='flex-1'>{children}</main>
-          <Toaster position='top-right' richColors closeButton theme='light' />
-          <Footer />
-        </TooltipProvider>
+        <ThemeProvider
+          attribute='class'
+          defaultTheme='light'
+          enableSystem
+          disableTransitionOnChange
+        >
+          <TooltipProvider>
+            <Navbar />
+            <main className='flex-1'>{children}</main>
+            <Toaster position='top-right' richColors closeButton theme='light' />
+            <Footer />
+          </TooltipProvider>
+        </ThemeProvider>
       </body>
     </html>
   )

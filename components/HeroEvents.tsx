@@ -40,7 +40,7 @@ const HeroEvents = () => {
             perfect ambiance, tailored menus, and exceptional service to make
             every event truly special.
           </p>
-          <SpecialButton link='/events/contact' label='Book a Table' />
+          <SpecialButton link='/contact' label='Book a Table' />
         </div>
       </div>
     </div>

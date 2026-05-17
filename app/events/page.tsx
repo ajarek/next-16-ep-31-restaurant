@@ -1,7 +1,14 @@
+import type { Metadata } from "next"
 import Events from "@/components/Events"
 import HeroEvents from "@/components/HeroEvents"
 import HostEvent from "@/components/HostEvent"
 import Testimonials from "@/components/Testimonials"
+
+export const metadata: Metadata = {
+  title: "Events & Private Dining",
+  description:
+    "Host your special event at Still Sea in Kołobrzeg. From romantic dinners to corporate gatherings, we create unforgettable experiences with tailored menus and elegant ambiance.",
+}
 
 const EventsPage = () => {
   return (

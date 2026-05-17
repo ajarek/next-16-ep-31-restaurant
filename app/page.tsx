@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import DiningOptions from "@/components/DiningOptions"
 import OurMenu from "@/components/OurMenu"
 import AboutUs from "@/components/AboutUs"
@@ -6,6 +7,11 @@ import Testimonials from "@/components/Testimonials"
 import Gourmet from "@/components/Gourmet"
 import Gallery from "@/components/Gallery"
 import HeroHome from "@/components/HeroHome"
+
+export const metadata: Metadata = {
+  description:
+    "Discover Still Sea in Kołobrzeg — where every dish tells a story. Experience exquisite cuisine, elegant ambiance, and unforgettable flavors. Book your table today.",
+}
 
 export default function Home() {
   return (
